@@ -3,12 +3,6 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
-const express = require('express')
-const cors = require('cors')
-const app = express()
- 
-app.use(cors())
-
 export default function App() {
   const [cityName, setCityName] = useState('');
   return (
@@ -26,7 +20,6 @@ export default function App() {
           const response = fetch(API);
           if (response.status == 200) {
             const data = response.json();
-            console.log(data);
           } else {
           }
         } catch (error) {
